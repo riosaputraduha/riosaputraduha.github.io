@@ -14,6 +14,145 @@
   </style>
 </head>
 <body>
-  <!-- Halaman ini sengaja dikosongkan -->
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Sticky Header Index -->
+  <nav class="sticky-header">
+    <div class="brand-logo">📚 Portal Tugas</div>
+    <!-- Link mengarah ke halaman Pull Request repositori Anda -->
+    <a href="#kritik-saran" class="btn-feedback">
+      💡 Kritik & Saran
+    </a>
+  </nav>
+
+  <div class="container">
+    <header>
+      <span class="badge">19.7C.26 &ndash; Digital Kreatif</span>
+      <h1>Repository Tugas Kelompok</h1>
+      <p>Eksplorasi ide, analisis, dan publikasi tugas mahasiswa dalam memahami transformasi digital kreatif.</p>
+    </header>
+
+    <div class="grid">
+      <!-- Kartu 1: Tugas Anda -->
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h2>Memahami Transformasi Digital</h2>
+
+        <div class="author-info">
+          <div class="author-avatar">RD</div>
+          <div class="author-details">
+            <span class="author-name">Rio Saputra Duha</span>
+            <span class="author-nim">NIM: 19232062</span>
+          </div>
+        </div>
+
+        <p class="desc">Pembahasan mendalam mengenai perbedaan digitalisasi dengan digital kreatif, nilai ekonomi, dan peran AI dalam industri kreatif.</p>
+
+        <a href="digital-creative.html" class="btn">
+          Baca Artikel
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+
+      <!-- Kartu 2: Anggota 2 -->
+      <div class="card">
+        <div class="card-icon">💡</div>
+        <h2>Judul Tugas Anggota 2</h2>
+
+        <div class="author-info">
+          <div class="author-avatar">T1</div>
+          <div class="author-details">
+            <span class="author-name">Raden Jihaad F I A</span>
+            <span class="author-nim">NIM: 19230765</span>
+          </div>
+        </div>
+
+        <p class="desc">Ringkasan singkat tentang topik tugas atau proyek yang dikerjakan oleh anggota kedua dalam pengembangan digital.</p>
+
+        <a href="tugas-anggota2.html" class="btn">
+          Baca Artikel
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+
+      <!-- Kartu 3: Anggota 3 -->
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h2>Eksplorasi Digital Kreatif, Model Bisnis, dan Kolaborasi AI</h2>
+
+        <div class="author-info">
+          <div class="author-avatar">T2</div>
+          <div class="author-details">
+            <span class="author-name">Faiz Dzakiy Helsan</span>
+            <span class="author-nim">NIM: 19231870</span>
+          </div>
+        </div>
+
+        <p class="desc">Mengulas esensi digital kreatif yang memadukan inovasi dan nilai ekonomi, karakteristik model bisnis digital modern, serta dinamika peran AI sebagai kolaborator kreatif lengkap dengan checklist mitigasi risiko.</p>
+
+        <a href="tugas-anggota3.html" class="btn">
+          Baca Artikel
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Form Kritik & Saran -->
+    <div class="feedback-section" id="kritik-saran">
+      <h2>Kirim Kritik & Saran</h2>
+      <p>Masukan Anda akan dikirimkan sebagai <strong>Issue</strong> secara langsung ke repositori GitHub kami.</p>
+      
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label for="senderName">Nama Anda</label>
+          <input type="text" id="senderName" placeholder="Contoh: Alexander Johnson" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackBody">Pesan / Saran</label>
+          <textarea id="feedbackBody" rows="4" placeholder="Tulis kritik, saran, atau temuan error di sini..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Kirim ke GitHub Issues &rarr;</button>
+      </form>
+    </div>
+
+    <!-- Script untuk memproses form menjadi URL GitHub Issue -->
+    <script>
+      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah reload halaman
+        
+        // Mengambil nilai dari form
+        const name = document.getElementById('senderName').value;
+        const feedback = document.getElementById('feedbackBody').value;
+        
+        // Format teks yang akan dikirim ke GitHub
+        const issueTitle = `Saran dari ${name}`;
+        const issueBody = `**Nama Pengirim:** ${name}\n\n**Pesan:**\n${feedback}\n\n---\n*Dikirim melalui form Portal Tugas*`;
+        
+        // URL repositori Anda (Pastikan fitur Issues aktif di repo setting)
+        const repoUrl = 'https://github.com/riosaputraduha/riosaputraduha.github.io';
+        
+        // Membuat URL khusus untuk pre-fill Issue
+        const newIssueUrl = `${repoUrl}/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}`;
+        
+        // Buka tab baru menuju GitHub
+        window.open(newIssueUrl, '_blank');
+        
+        // Kosongkan form setelah diklik
+        this.reset();
+      });
+    </script>
+
+    <footer style="margin-top: 60px; padding: 24px 0; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 0.85rem; line-height: 1.6;">
+        <p><strong>Arsip Akademik &bull; Mata Kuliah Digital Kreatif</strong></p>
+        <p>Seluruh materi disusun untuk tujuan evaluasi akademis dan pembelajaran daring.</p>
+        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 8px;">
+            &copy; 2026 Rio Saputra Duha & Anggota Kelompok &bull; Peer-Reviewed Course Project
+        </p>
+    </footer>
+  </div>
+
 </body>
 </html>

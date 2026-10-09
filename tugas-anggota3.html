@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 1: Digital Kreatif - Faiz Dzakiy Helsan</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --text-color: #1f2937;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.75;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 48px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+    .nav-back {
+      margin-bottom: 30px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      color: #334155;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 20px;
+      border-radius: 99px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    .btn-back:hover {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      border-color: #2563eb;
+      transform: translateX(-5px);
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    }
+    .btn-back svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      transition: transform 0.3s ease;
+    }
+    .btn-back:hover svg {
+      transform: translateX(-4px);
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.3;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.35rem;
+      color: #1e293b;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #334155;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    .meta-box {
+      background-color: #f8fafc;
+      border-left: 4px solid var(--primary-color);
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+    .meta-box p {
+      margin: 4px 0;
+    }
+    ul, ol {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+    .academic-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 0.88rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .footer-col h4 {
+      font-size: 0.95rem;
+      color: #0f172a;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-col p {
+      margin: 4px 0;
+      line-height: 1.5;
+    }
+    .footer-col .sub-text {
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+    .footer-links a, .footer-bottom a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-links a:hover, .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      border-top: 1px solid #f1f5f9;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+    .footer-bottom .tagline {
+      margin-top: 6px;
+      color: #94a3b8;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav-back">
+      <a href="index.html" class="btn-back">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+        Kembali ke Beranda
+      </a>
+    </div>
+
+    <h1>Tugas 1: Digital Kreatif</h1>
+
+    <!-- Informasi Anggota -->
+    <div class="meta-box">
+      <p><strong>Nama:</strong> Faiz Dzakiy Helsan</p>
+      <p><strong>NIM:</strong> 19231870</p>
+      <p><strong>Kelas & Mata Kuliah:</strong> 19.7C.26 &ndash; Digital Kreatif</p>
+    </div>
+
+    <!-- Area Konten -->
+    <div class="content-area">
+      <h2>1. Apa perbedaan digital kreatif dan sekadar digitalisasi?</h2>
+      
+      <h3>A. Digitalisasi</h3>
+      <p>Digitalisasi pada dasarnya adalah proses mengubah atau memindahkan aktivitas yang sebelumnya dilakukan secara konvensional ke dalam bentuk digital.</p>
+      <p>Contohnya:</p>
+      <ul>
+        <li>Absensi menggunakan kertas &rarr; menggunakan aplikasi absensi.</li>
+        <li>Penjualan di toko fisik menggunakan website atau marketplace.</li>
+        <li>Dokumen kertas &rarr; menjadi dokumen PDF.</li>
+        <li>Promosi melalui brosur &rarr; menggunakan media sosial.</li>
+      </ul>
+      <p>Dalam digitalisasi, fokus utamanya adalah efisiensi dan kemudahan proses. Teknologi digunakan untuk membuat proses yang sudah ada menjadi lebih cepat, praktis, murah, atau mudah diakses. OECD menjelaskan bahwa transformasi digital tidak hanya berkaitan dengan penggunaan teknologi, tetapi juga bagaimana teknologi digital dan data digunakan untuk membentuk aktivitas dan model baru.</p>
+
+      <h3>B. Digital kreatif</h3>
+      <p>Sementara itu, digital kreatif bukan sekadar memindahkan aktivitas lama ke media digital. Digital kreatif menggabungkan: Kreativitas + teknologi digital + inovasi + kebutuhan pengguna + nilai ekonomi.</p>
+      <p>Contohnya, seseorang tidak hanya menjual lukisan secara online. Ia membuat platform yang memungkinkan pelanggan memesan desain custom, melihat proses pembuatan secara digital, melakukan pembayaran, dan mendapatkan produk dalam bentuk fisik maupun digital. Contoh lainnya adalah:</p>
+      <ul>
+        <li>Membuat konten TikTok/YouTube dengan konsep yang unik.</li>
+        <li>Membuat desain UI/UX yang menyelesaikan masalah pengguna.</li>
+        <li>Membuat game dengan mekanisme permainan yang inovatif.</li>
+        <li>Membuat aplikasi edukasi dengan pendekatan pembelajaran yang berbeda.</li>
+        <li>Membuat brand digital dengan identitas visual dan pengalaman pengguna yang kuat.</li>
+      </ul>
+      <p>UNCTAD menjelaskan bahwa ekonomi kreatif berada pada pertemuan antara kreativitas manusia, ide, kekayaan intelektual, pengetahuan, dan teknologi.</p>
+
+      <h3>Perbedaan Utama</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspek</th>
+            <th>Digitalisasi</th>
+            <th>Digital Kreatif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fokus</strong></td>
+            <td>Efisiensi proses</td>
+            <td>Menciptakan nilai dan inovasi</td>
+          </tr>
+          <tr>
+            <td><strong>Tujuan</strong></td>
+            <td>Membuat proses lebih praktis</td>
+            <td>Menghasilkan solusi/produk baru</td>
+          </tr>
+          <tr>
+            <td><strong>Kreativitas</strong></td>
+            <td>Tidak selalu diperlukan</td>
+            <td>Menjadi unsur utama</td>
+          </tr>
+          <tr>
+            <td><strong>Teknologi</strong></td>
+            <td>Sebagai alat</td>
+            <td>Sebagai alat sekaligus media inovasi</td>
+          </tr>
+          <tr>
+            <td><strong>Contoh</strong></td>
+            <td>Nota kertas &rarr; e-nota</td>
+            <td>Platform bisnis dengan pengalaman pengguna baru</td>
+          </tr>
+          <tr>
+            <td><strong>Nilai</strong></td>
+            <td>Efisiensi waktu/biaya</td>
+            <td>Nilai ekonomi, pengalaman, dan diferensiasi</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Kesimpulan:</strong> Digitalisasi menjawab pertanyaan "Bagaimana aktivitas yang sudah ada dibuat lebih digital?", sedangkan digital kreatif menjawab "Bagaimana teknologi digital dapat digunakan untuk menciptakan sesuatu yang baru dan bernilai?"</p>
+
+      <h2>2. Mengapa kreativitas dapat menjadi sumber nilai ekonomi?</h2>
+      <p>Kreativitas dapat menjadi sumber nilai ekonomi karena kreativitas mampu menghasilkan ide, produk, jasa, pengalaman, dan kekayaan intelektual yang memiliki nilai bagi orang lain dan dapat dipasarkan. UNCTAD mendefinisikan ekonomi kreatif sebagai aktivitas ekonomi berbasis pengetahuan yang menggunakan kreativitas dan modal intelektual sebagai input utama serta menghasilkan produk atau jasa dengan kandungan kreatif, nilai ekonomi, dan tujuan pasar.</p>
+      
+      <h3>Proses kreativitas menjadi nilai ekonomi</h3>
+      <p>Secara sederhana: Ide &rarr; Kreativitas &rarr; Produk/Jasa &rarr; Nilai bagi pengguna &rarr; Pasar &rarr; Pendapatan.</p>
+      <p>Contohnya: Seorang desainer memiliki ide membuat template desain Instagram.</p>
+      <ul>
+        <li>Ide: membuat template yang mudah digunakan UMKM.</li>
+        <li>Kreativitas: menentukan desain, warna, layout, dan konsep.</li>
+        <li>Produk: menghasilkan paket template digital.</li>
+        <li>Nilai: UMKM dapat membuat konten profesional dengan lebih cepat.</li>
+        <li>Pasar: template dijual melalui marketplace.</li>
+        <li>Pendapatan: desainer mendapatkan keuntungan dari penjualan.</li>
+      </ul>
+      <p>Jadi, yang memiliki nilai ekonomi bukan sekadar "ide" mentahnya, tetapi kemampuan mengubah ide menjadi sesuatu yang berguna dan dapat dipertukarkan di pasar.</p>
+
+      <h3>Mengapa kreativitas memiliki nilai?</h3>
+      <ol>
+        <li><strong>Diferensiasi:</strong> Kreativitas membuat produk berbeda dari kompetitor. Misalnya terdapat 100 toko pakaian online. Produk yang memiliki desain, identitas visual, storytelling, dan branding berbeda akan lebih mudah dikenali.</li>
+        <li><strong>Menyelesaikan masalah:</strong> Kreativitas dapat menghasilkan solusi terhadap masalah pengguna. Contohnya aplikasi transportasi online bukan hanya menggunakan teknologi, tetapi menggabungkan teknologi dengan cara baru untuk menyelesaikan masalah transportasi.</li>
+        <li><strong>Menghasilkan kekayaan intelektual:</strong> Kreativitas dapat menghasilkan: desain, musik, video, tulisan, software, logo, fotografi, game, karakter, merek. Produk-produk tersebut dapat memiliki nilai komersial dan perlindungan kekayaan intelektual. WIPO menekankan bahwa kekayaan intelektual merupakan komponen penting dalam industri kreatif karena hak tersebut dapat membantu kreator menghasilkan pendapatan dari karya dan talentanya.</li>
+        <li><strong>Membangun pengalaman:</strong> Dalam ekonomi digital, konsumen tidak hanya membeli produk tetapi juga pengalaman. Misalnya dua aplikasi memiliki fungsi yang sama, tetapi salah satunya memiliki UI/UX yang lebih menarik dan mudah digunakan. Kreativitas dapat membuat aplikasi tersebut memiliki keunggulan kompetitif.</li>
+        <li><strong>Dapat menghasilkan produk digital yang skalabel:</strong> Produk digital seperti: software, template, e-book, game, musik, desain, kursus online, dapat dijual berkali-kali tanpa biaya produksi ulang sebesar produk fisik.</li>
+      </ol>
+      <p>UNCTAD mencatat bahwa ekonomi kreatif merupakan sektor yang semakin penting secara ekonomi; ekspor jasa kreatif mencapai sekitar US$1,4 triliun pada 2022, dengan software dan R&D termasuk kontributor besar.</p>
+      <p><strong>Kesimpulan:</strong> Kreativitas menjadi sumber ekonomi ketika ide kreatif berhasil diubah menjadi sesuatu yang memberikan manfaat, memiliki permintaan, dapat dipasarkan, dan menghasilkan nilai bagi pencipta maupun konsumen.</p>
+
+      <h2>3. Apa yang membuat sebuah solusi dapat disebut bisnis digital?</h2>
+      <p>Tidak semua produk yang menggunakan internet otomatis menjadi bisnis digital. Sebuah solusi dapat disebut bisnis digital ketika teknologi digital menjadi bagian penting dari cara bisnis menciptakan, memberikan, atau menangkap nilai.</p>
+      <p>Secara sederhana: Bisnis digital = solusi yang menggunakan teknologi digital untuk menciptakan nilai bagi pelanggan dan menghasilkan nilai ekonomi bagi bisnis. OECD menjelaskan bahwa digitalisasi dapat menciptakan model bisnis baru, meningkatkan produktivitas, mendorong inovasi, dan membuka peluang kewirausahaan.</p>
+      
+      <h3>Beberapa karakteristik bisnis digital</h3>
+      <ol>
+        <li><strong>Memanfaatkan teknologi digital:</strong> Contohnya website, aplikasi, cloud, AI, marketplace, media sosial, pembayaran digital, data analytics.</li>
+        <li><strong>Memiliki masalah yang ingin diselesaikan:</strong> Teknologi saja tidak cukup. Contohnya "Saya membuat aplikasi" belum tentu merupakan bisnis, tetapi "Saya membuat aplikasi yang membantu pemilik UMKM mengelola stok dan transaksi secara otomatis dengan sistem berlangganan" sudah menunjukkan solusi bisnis.</li>
+        <li><strong>Memiliki target pengguna/pelanggan:</strong> Harus jelas siapa yang membutuhkan solusi tersebut. Misalnya mahasiswa, UMKM, perusahaan, guru, freelancer, konsumen umum.</li>
+        <li><strong>Memiliki proposisi nilai:</strong> Pertanyaan pentingnya: "Mengapa orang harus menggunakan atau membeli solusi ini?" Misalnya lebih murah, lebih cepat, lebih mudah, lebih aman, lebih personal, lebih nyaman.</li>
+        <li><strong>Memiliki model pendapatan:</strong> Contohnya subscription/berlangganan, transaksi, komisi, iklan, freemium, lisensi, penjualan produk digital.</li>
+        <li><strong>Dapat berkembang dengan teknologi:</strong> Bisnis digital biasanya memiliki kemampuan untuk menjangkau pelanggan dalam skala besar tanpa harus meningkatkan biaya secara proporsional.</li>
+      </ol>
+      
+      <h3>Contoh</h3>
+      <ul>
+        <li><strong>Kasus A - Digitalisasi:</strong> Sebuah toko mencatat transaksi menggunakan Excel. Ini merupakan digitalisasi proses administrasi.</li>
+        <li><strong>Kasus B - Bisnis digital:</strong> Seseorang membuat aplikasi kasir berbasis cloud, kemudian menjualnya kepada ribuan UMKM menggunakan sistem subscription. Ini merupakan bisnis digital karena teknologi menjadi bagian inti dari produk, distribusi, dan model pendapatannya.</li>
+      </ul>
+      <p><strong>Kesimpulan:</strong> Pembeda utamanya adalah peran teknologi dalam model bisnis, bukan sekadar apakah bisnis tersebut menggunakan internet atau tidak.</p>
+
+      <h2>4. Sebutkan dan jelaskan secara lengkap (terperinci) 3 peran AI dalam proses kreatif.</h2>
+      <p>AI sebaiknya dipahami bukan hanya sebagai "mesin pembuat karya", tetapi sebagai alat bantu dalam proses kreatif manusia. UNCTAD mencatat bahwa AI telah digunakan dalam berbagai tahap industri kreatif, termasuk pembuatan skrip, musik, gambar, caption, animasi, virtual reality, post-production, hingga analisis data pengguna.</p>
+      
+      <h3>A. AI sebagai alat untuk menghasilkan dan mengembangkan ide</h3>
+      <p>AI dapat digunakan pada tahap ideation, yaitu ketika seseorang masih mencari atau mengembangkan gagasan. Contohnya, seorang mahasiswa ingin membuat bisnis digital tetapi belum menemukan konsep. Ia dapat meminta AI untuk membantu: melakukan brainstorming, menghasilkan alternatif ide, mencari kemungkinan target pasar, membuat konsep produk, membuat variasi campaign, membuat beberapa alternatif judul, menemukan sudut pandang berbeda.</p>
+      <p><strong>Contoh:</strong> Prompt "Berikan 10 ide bisnis digital untuk mahasiswa yang memiliki modal kecil dan target pasar mahasiswa." AI menghasilkan beberapa alternatif, namun manusia tetap harus menentukan: ide mana yang realistis, apakah ada kebutuhan pasar, apakah idenya berbeda dari kompetitor, apakah dapat menghasilkan keuntungan. Analisis: AI mempercepat proses eksplorasi, tetapi keputusan kreatif tetap sebaiknya berada pada manusia.</p>
+
+      <h3>B. AI sebagai alat produksi dan eksperimen kreatif</h3>
+      <p>Setelah ide ditemukan, AI dapat membantu mengubah ide menjadi prototype atau draft awal. Misalnya: AI gambar &rarr; membuat konsep visual, AI teks &rarr; membuat draft artikel, AI musik &rarr; membuat konsep musik, AI video &rarr; membuat storyboard atau video awal, AI coding &rarr; membantu menghasilkan kode, AI desain &rarr; membantu mengeksplorasi layout. UNCTAD mencatat bahwa AI telah menjadi salah satu pendorong perubahan dalam ekonomi kreatif dengan membantu pembuatan berbagai bentuk konten dan meningkatkan workflow produksi.</p>
+      <p><strong>Contoh:</strong> Seorang desainer ingin membuat poster event. Prosesnya: Ide manusia &rarr; prompt &rarr; AI menghasilkan beberapa konsep &rarr; desainer memilih &rarr; melakukan editing &rarr; finalisasi. Keuntungan utamanya adalah eksperimen menjadi lebih cepat. Namun, hasil AI sebaiknya tidak langsung dianggap sebagai karya final; manusia perlu melakukan seleksi, penyuntingan, pengecekan, penyempurnaan, penyesuaian dengan identitas brand.</p>
+
+      <h3>C. AI sebagai alat evaluasi dan penyempurnaan karya</h3>
+      <p>Peran ketiga adalah evaluation dan refinement. AI dapat digunakan untuk memberikan perspektif tambahan terhadap karya yang sudah dibuat. Misalnya mengecek tata bahasa, menganalisis struktur tulisan, mencari bagian yang kurang jelas, memberikan alternatif headline, mengevaluasi konsep pemasaran, memberikan simulasi respons pengguna, menemukan inkonsistensi, membantu melakukan analisis data.</p>
+      <p><strong>Contoh:</strong> Seorang mahasiswa telah membuat artikel ilmiah. AI dapat membantu mengidentifikasi: kalimat yang terlalu panjang, struktur yang kurang jelas, pengulangan, kesalahan tata bahasa, kemungkinan pertanyaan pembaca. Tetapi AI tidak boleh dijadikan satu-satunya sumber validasi fakta.</p>
+
+      <h3>Ringkasan Peran AI</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Peran AI</th>
+            <th>Tahap</th>
+            <th>Contoh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ideator</strong></td>
+            <td>Ideation</td>
+            <td>Brainstorming dan mencari alternatif konsep</td>
+          </tr>
+          <tr>
+            <td><strong>Co-producer</strong></td>
+            <td>Production</td>
+            <td>Membuat draft gambar, teks, video, kode</td>
+          </tr>
+          <tr>
+            <td><strong>Evaluator</strong></td>
+            <td>Evaluation</td>
+            <td>Kritik, penyuntingan, analisis dan penyempurnaan</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Dengan demikian, posisi ideal AI dalam proses kreatif adalah sebagai kolaborator atau alat bantu, bukan sepenuhnya menggantikan kreativitas manusia. WIPO juga mencatat adanya perdebatan mengenai apakah AI sebaiknya dipandang sebagai ancaman atau sebagai kolaborator bagi kreator manusia.</p>
+
+      <h2>5. Apa risiko AI yang harus diperiksa sebelum karya dipublikasikan?</h2>
+      <p>Ini merupakan bagian yang sangat penting karena hasil AI tidak otomatis benar, aman, atau bebas masalah hukum.</p>
+      
+      <ul>
+        <li><strong>A. Risiko hak cipta dan kekayaan intelektual:</strong> Karya AI dapat menimbulkan pertanyaan apakah materi yang digunakan atau dihasilkan AI melanggar hak orang lain. Misalnya AI menghasilkan gambar yang sangat mirip dengan karya seniman tertentu, atau menggunakan karakter berhak cipta, foto orang lain, musik berlisensi, logo perusahaan, tulisan orang lain tanpa izin. WIPO menyatakan bahwa penggunaan karya berhak cipta sebagai data pelatihan AI dan status hukum output AI merupakan isu penting yang masih berkembang.</li>
+        <li><strong>B. Risiko plagiarisme dan kemiripan karya:</strong> AI dapat menghasilkan karya yang memiliki kemiripan dengan karya yang sudah ada. Misalnya artikel terlalu mirip dengan sumber tertentu, desain menyerupai desain orang lain, slogan memiliki kemiripan dengan brand, gambar memiliki karakteristik yang sangat identik dengan karya tertentu. Karya AI tetap perlu melalui proses originality checking.</li>
+        <li><strong>C. Risiko informasi palsu atau hallucination:</strong> AI dapat menghasilkan informasi yang terlihat meyakinkan tetapi sebenarnya salah, seperti data statistik yang tidak ada, nama penulis yang salah, jurnal yang sebenarnya tidak pernah diterbitkan, kutipan palsu, fakta yang sudah tidak relevan. OECD mengidentifikasi risiko AI generatif terkait misinformasi dan disinformasi, termasuk kemungkinan memperkuat informasi yang salah atau menghasilkan konten yang dimanipulasi.</li>
+        <li><strong>D. Risiko bias:</strong> AI belajar dari data yang digunakan dalam proses pengembangannya, sehingga jika data memiliki bias, output AI juga dapat menghasilkan bias (seperti stereotip, representasi gender tidak seimbang, asumsi budaya keliru, penilaian diskriminatif). OECD secara khusus menyoroti risiko AI dalam mempertahankan atau memperkuat societal biases dan diskriminasi.</li>
+        <li><strong>E. Risiko privasi dan keamanan data:</strong> Jangan sembarangan memasukkan data pribadi atau informasi rahasia ke dalam AI (seperti NIK, nomor rekening, password, data pelanggan, dokumen perusahaan, informasi penelitian yang belum dipublikasikan). OECD menempatkan privacy, security, online safety, dan information integrity sebagai risiko penting dalam transformasi digital.</li>
+        <li><strong>F. Risiko deepfake dan manipulasi:</strong> AI dapat membuat wajah palsu, suara palsu, video palsu, foto yang terlihat nyata, atau pernyataan palsu seolah-olah berasal dari seseorang. WIPO menyoroti munculnya deepfake serta persoalan terkait hak atas suara dan gambar seseorang.</li>
+        <li><strong>G. Risiko kehilangan konteks dan kualitas:</strong> AI dapat menghasilkan karya yang secara teknis terlihat bagus tetapi tidak sesuai dengan konteks (tidak sesuai budaya, tidak sesuai target pembaca, terlalu umum, tidak sesuai tujuan komunikasi).</li>
+      </ul>
+
+      <h3>Checklist sebelum karya AI dipublikasikan</h3>
+      <ol>
+        <li><strong>Accuracy:</strong> Apakah semua informasi benar?</li>
+        <li><strong>Originality:</strong> Apakah karya memiliki kemiripan dengan karya orang lain?</li>
+        <li><strong>Copyright:</strong> Apakah gambar, musik, teks, font, karakter, atau aset lainnya boleh digunakan?</li>
+        <li><strong>Bias:</strong> Apakah terdapat stereotip atau diskriminasi?</li>
+        <li><strong>Privacy:</strong> Apakah ada data pribadi atau informasi rahasia?</li>
+        <li><strong>Authenticity:</strong> Apakah pembaca perlu diberi tahu bahwa konten dibuat/dibantu AI?</li>
+        <li><strong>Human review:</strong> Apakah manusia sudah melakukan pengecekan dan penyuntingan akhir?</li>
+        <li><strong>Context:</strong> Apakah karya benar-benar sesuai dengan tujuan dan target audiens?</li>
+      </ol>
+
+      <h2>DAFTAR REFERENSI</h2>
+      <ol>
+        <li>UNCTAD. Creative Economy Outlook 2024. United Nations Trade and Development. Membahas definisi ekonomi kreatif, perdagangan produk/jasa kreatif, digitalisasi, dan peran AI dalam industri kreatif.</li>
+        <li>UNCTAD. Trade and the Creative Economy. Membahas hubungan antara kreativitas, kekayaan intelektual, teknologi, dan nilai ekonomi.</li>
+        <li>UNESCO. Cultural and Creative Industries (CCI). Membahas industri kreatif sebagai penggerak pertumbuhan ekonomi, lapangan kerja, dan nilai budaya.</li>
+        <li>OECD. The OECD Going Digital Integrated Policy Framework 2026. Membahas transformasi digital, inovasi digital, pekerjaan, kepercayaan, dan lingkungan bisnis digital.</li>
+        <li>OECD. Lorenz, P., Perset, K., & Berryhill, J. (2023). Initial Policy Considerations for Generative Artificial Intelligence. OECD Artificial Intelligence Papers. Membahas risiko AI generatif, termasuk bias, hak cipta, misinformasi, disinformasi, dan perubahan pasar tenaga kerja.</li>
+        <li>WIPO. Artificial Intelligence and Intellectual Property. Membahas hubungan AI dengan hak kekayaan intelektual, copyright, output AI, dan hak kreator.</li>
+        <li>WIPO. Making a Living in the Creative Industries. Membahas pentingnya intellectual property bagi pelaku industri kreatif dan bagaimana kreativitas dapat menghasilkan pendapatan.</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>
